@@ -76,8 +76,6 @@ services:
       context: .
       dockerfile: user/Dockerfile
     env_file: ./user/.env
-    ports:
-      - "8001:8001"
     depends_on:
       kafka-init:
         condition: service_completed_successfully
@@ -91,8 +89,6 @@ services:
       context: .
       dockerfile: accommodation/Dockerfile
     env_file: ./accommodation/.env
-    ports:
-      - "8000:8000"
     depends_on:
       kafka-init:
         condition: service_completed_successfully
@@ -106,8 +102,6 @@ services:
       context: .
       dockerfile: payment/Dockerfile
     env_file: ./payment/.env
-    ports:
-      - "8003:8003"
     depends_on:
       kafka-init:
         condition: service_completed_successfully
@@ -121,8 +115,6 @@ services:
       context: .
       dockerfile: rent/Dockerfile
     env_file: ./rent/.env
-    ports:
-      - "8002:8002"
     depends_on:
       kafka-init:
         condition: service_completed_successfully
@@ -136,8 +128,6 @@ services:
       context: .
       dockerfile: message/Dockerfile
     env_file: ./message/.env
-    ports:
-      - "8004:8004"
     depends_on:
       kafka-init:
         condition: service_completed_successfully
