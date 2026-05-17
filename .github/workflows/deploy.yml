@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /backend-repo
+            cd backend-repo/
             git fetch origin
             git reset --hard origin/main
             docker compose pull
