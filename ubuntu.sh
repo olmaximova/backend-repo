@@ -6,8 +6,6 @@ sudo apt-get install curl -y
 
 sudo apt-get install nginx -y
 
-sudo apt-get install python3-certbot-nginx -y
-
 # Add Docker's official GPG key:
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
