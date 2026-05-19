@@ -13,6 +13,6 @@ router.get(
 );
 router.get("/:id", authMiddleware, MessageController.getById);
 router.post("/", authMiddleware, MessageController.create);
-router.delete("/:id", authMiddleware, MessageController.deleteMessage);
+// router.delete("/:id", authMiddleware, MessageController.deleteMessage);
 
 export default router;
