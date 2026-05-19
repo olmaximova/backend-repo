@@ -156,29 +156,29 @@ class MessageController {
     }
   };
 
-  // deleteMessage = async (
-  //   req: Request<MessageIdParams>,
-  //   res: Response,
-  // ): Promise<void> => {
-  //   try {
-  //     const { id } = req.params;
+  deleteMessage = async (
+    req: Request<MessageIdParams>,
+    res: Response,
+  ): Promise<void> => {
+    try {
+      const { id } = req.params;
 
-  //     if (!id) {
-  //       return void res.status(400).json({ message: "id is required" });
-  //     }
+      if (!id) {
+        return void res.status(400).json({ message: "id is required" });
+      }
 
-  //     const message = await MessageService.getById(id);
-  //     if (!message) {
-  //       return void res.status(404).json({ message: "Message not found" });
-  //     }
+      const message = await MessageService.getById(id);
+      if (!message) {
+        return void res.status(404).json({ message: "Message not found" });
+      }
 
-  //     await MessageService.deleteMessage(id);
+      await MessageService.deleteMessage(id);
 
-  //     res.status(200).json({ message: "Message deleted successfully" });
-  //   } catch {
-  //     res.status(500).json({ message: "Internal server error" });
-  //   }
-  // };
+      res.status(200).json({ message: "Message deleted successfully" });
+    } catch {
+      res.status(500).json({ message: "Internal server error" });
+    }
+  };
 }
 
 export default new MessageController();

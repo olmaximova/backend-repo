@@ -143,9 +143,9 @@ class MessageService {
     );
   }
 
-  // async deleteMessage(id: string): Promise<void> {
-  //   await this.messageRepository.delete(id);
-  // }
+  async deleteMessage(id: string): Promise<void> {
+    await this.messageRepository.delete(id);
+  }
 
   async getConversationIdByRentId(rentId: string) {
     return null;
